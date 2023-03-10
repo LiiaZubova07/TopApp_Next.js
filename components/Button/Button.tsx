@@ -1,6 +1,7 @@
 import styles from "./Button.module.css";
 import { ButtonProps } from "./Button.props";
 import cn from "classnames";
+// import {ReactComponent as ArrowIcon} from "./arrow.svg";
 import ArrowIcon from "./arrow.svg";
 
 export const Button = ({
@@ -20,7 +21,9 @@ export const Button = ({
     >
       {children}
       {arrow !== "none" && (
-        <span className={cn(styles.arrow, { [styles.down]: arrow == "down" })}>
+        <span className={cn(styles.arrow, {
+          [styles.down]: arrow == "down"
+          })}>
           <ArrowIcon />
         </span>
       )}
