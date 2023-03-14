@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
     <>
       <Head>
         <title>MyTop - the best top</title>
-        <link key={1} rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
