@@ -9,6 +9,7 @@ body {
   font-family: "Noto Sans KR", sans-serif;
   color: var(--black);
   background: #f5f6f8;
+  padding: 20px;
 }
 
 a {
@@ -38,7 +39,6 @@ a {
   margin-right: 5px;
   border-radius: 20px;
 
-  padding: 5px;
 }
 
 .tag--size-s {

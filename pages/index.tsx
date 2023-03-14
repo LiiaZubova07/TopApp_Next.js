@@ -1,4 +1,4 @@
-import { Button, Htag,Rating } from "../components";
+import { Button,Rating } from "../components";
 import React, { useState } from "react";
 
 export default function Home(): JSX.Element {
@@ -6,9 +6,10 @@ export default function Home(): JSX.Element {
 
   return (
     <>
-      <h1 >Title</h1>
-      <h2 >Title</h2>
-      <h3 >Title</h3>
+      <div className="h1">Title</div>
+      <div className="h2">Title</div>
+      <div className="h3">Title</div>
+      
       <Button appearance="primary" arrow="right">
         Кнопка
       </Button>
@@ -25,6 +26,7 @@ export default function Home(): JSX.Element {
       <div className="tag tag--size-s tag--red">Red</div>
       <div className="tag tag--size-m tag--grey">Grey</div>
       <div className="tag tag--size-s tag--primary ">Primary</div>
+      
       <Rating rating={rating} isEditable setRating={setRating} />
     </>
   );
