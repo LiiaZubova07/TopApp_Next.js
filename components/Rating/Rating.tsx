@@ -17,20 +17,20 @@ export const Rating = ({
   }, [rating]);
 
   const constructRating = (currentRating: number) => {
-    const updatedArray = ratingArray.map((r: JSX.Element, i: number) => {
+    const updatedArray = ratingArray.map((r: JSX.Element, index: number) => {
       return (
-        <span key={i}
+        <span key={index}
           className={cn(styles.star, {
-            [styles.filled]: i < currentRating,
+            [styles.filled]: index < currentRating,
             [styles.editable]: isEditable,
           })}
-          onMouseEnter={() => changeDisplay(i + 1)}
+          onMouseEnter={() => changeDisplay(index + 1)}
           onMouseLeave={() => changeDisplay(rating)}
-          onClick={() => onClick(i + 1)}
+          onClick={() => onClick(index + 1)}
         >
           <StarIcon
             tabIndex={isEditable ? 0 : -1}
-            onKeyDown={(e: KeyboardEvent<SVGElement>) => isEditable && handleSpace(i + 1, e)}
+            onKeyDown={(event: KeyboardEvent<SVGElement>) => isEditable && handleSpace(index + 1, event)}
           />
         </span>
       );
@@ -39,30 +39,30 @@ export const Rating = ({
     setRatingArray(updatedArray);
   };
 
-  const changeDisplay = (i: number) => {
+  const changeDisplay = (index: number) => {
     if (!isEditable) {
       return;
     }
-    constructRating(i);
+    constructRating(index);
   };
-  const onClick = (i: number) => {
+  const onClick = (index: number) => {
     if (!isEditable || !setRating) {
       return;
     }
-    setRating(i);
+    setRating(index);
   };
 
-  const handleSpace = (i: number, e: KeyboardEvent<SVGElement>) => {
-    if (e.code != "Space" || !setRating) {
+  const handleSpace = (index: number, event: KeyboardEvent<SVGElement>) => {
+    if (event.code != "Space" || !setRating) {
       return;
     }
-    setRating(i);
+    setRating(index);
   };
 
   return (
     <div {...props}>
-      {ratingArray.map((r, i) => (
-        <span key={i}>{r}</span>
+      {ratingArray.map((rating, index) => (
+        <span key={index}>{rating}</span>
       ))}
     </div>
   );
