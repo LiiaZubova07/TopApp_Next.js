@@ -1,4 +1,4 @@
-import { Button, Htag, P, Tag, Rating } from "../components";
+import { Button, Htag,Rating } from "../components";
 import React, { useState } from "react";
 
 export default function Home(): JSX.Element {
@@ -14,21 +14,15 @@ export default function Home(): JSX.Element {
         Кнопка
       </Button>
 
-      <P size="s">Small</P>
-      <P>Average</P>
-      <P size="l">Big</P>
+      <text className="text text--size-s">Small</text>
+      <text className="text text--size-m">Average</text>
+      <text className="text text--size-l">Big</text>
 
-      <Tag size="s">Ghost</Tag>
-      <Tag size="m" color="green">
-        Green
-      </Tag>
-      <Tag size="s" color="red">
-        Red
-      </Tag>
-      <Tag size="m" color="grey">
-        Grey
-      </Tag>
-      <Tag color="primary">Primary</Tag>
+      <div className="tag tag--size-s">Ghost</div>
+      <div className="tag tag--size-m tag--green ">Green</div>
+      <div className="tag tag--size-s tag--red">Red</div>
+      <div className="tag tag--size-m tag--grey">Grey</div>
+      <div className="tag tag--size-s tag--primary ">Primary</div>
       <Rating rating={rating} isEditable setRating={setRating} />
     </>
   );

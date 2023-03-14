@@ -8,7 +8,7 @@ html,
 body {
   font-family: "Noto Sans KR", sans-serif;
   color: var(--black);
-  background: #F5F6F8;
+  background: #f5f6f8;
 }
 
 a {
@@ -18,7 +18,7 @@ a {
 
 :root {
   --black: #3b434e;
-  --grey-light: #EBEBEB;
+  --grey-light: #ebebeb;
   --white: white;
   --primary: #7653fc;
   --primary-hover: #452caa;
@@ -28,3 +28,88 @@ a {
 
   --font-family: "Noto Sans KR", sans-serif;
 }
+
+/* ---------------------------------------- */
+
+.tag {
+  display: inline-block;
+
+  box-sizing: border-box;
+  margin-right: 5px;
+  border-radius: 20px;
+
+  padding: 5px;
+}
+
+.tag--size-s {
+  padding: 5px 10px;
+
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.tag--m {
+  padding: 5px 10px;
+
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.tag--ghost {
+  border: 1px solid var(--grey-light);
+}
+
+.tag--red {
+  color: var(--white);
+  background: #de0000;
+
+  font-weight: bold;
+}
+
+.tag--grey {
+  color: var(--white);
+  background: #b3c0d9;
+
+  font-weight: bold;
+}
+
+.tag--green {
+  color: var(--green);
+  background: var(--green-light);
+
+  font-weight: bold;
+}
+
+.tag--primary {
+  color: var(--primary);
+  background: none;
+  border: 1px solid var(--primary);
+}
+
+/* ---------------------------------------- */
+
+.text {
+  margin: 0;
+  display: block;
+}
+
+.text--size-s {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.text--size-m {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.text--size-l {
+  font-size: 18px;
+  line-height: 29px;
+}
+
+/* ---------------------------------------- */
+
+
+
+/* ---------------------------------------- */
