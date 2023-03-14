@@ -9,7 +9,7 @@ export default function Home(): JSX.Element {
       <div className="h1">Title</div>
       <div className="h2">Title</div>
       <div className="h3">Title</div>
-      
+
       <Button appearance="primary" arrow="right">
         Кнопка
       </Button>
