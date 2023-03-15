@@ -1,9 +1,9 @@
-import "@/styles/globals.css";
+import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import React from "react";
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <>
       <Head>
@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
           rel="stylesheet"
-        />
+        ></link>
       </Head>
       <Component {...pageProps} />
     </>
