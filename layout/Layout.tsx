@@ -5,6 +5,7 @@ import React from "react";
 import { Header } from "./Header/Header";
 import { Sidebar } from "./Sidebar/Sidebar";
 import { Footer } from "./Footer/Footer";
+import { FunctionComponent } from "react";
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
