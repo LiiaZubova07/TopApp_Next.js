@@ -1,6 +1,6 @@
 import { Button } from "@/components";
 import React from "react";
-import { Layout } from "@/layout/Layout";
+// import { Layout } from "@/layout/Layout";
 import { useState } from "react";
 import { Rating } from "@/components";
 import { withLayout } from "@/layout/Layout";
