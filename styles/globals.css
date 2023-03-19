@@ -18,7 +18,7 @@ a {
 
 :root {
   --black: #3b434e;
-  --grey-light: #ebebeb;
+  --gray-light: #ebebeb;
   --white: white;
   --primary: #7653fc;
   --primary-hover: #452caa;
@@ -55,7 +55,7 @@ a {
 }
 
 .tag--ghost {
-  border: 1px solid var(--grey-light);
+  border: 1px solid var(--gray-light);
 }
 
 .tag--red {
@@ -65,7 +65,7 @@ a {
   font-weight: bold;
 }
 
-.tag--grey {
+.tag--gray {
   color: var(--white);
   background: #b3c0d9;
 
