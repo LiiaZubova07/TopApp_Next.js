@@ -1,6 +1,6 @@
 import { Button } from "@/components";
 import React from "react";
-import { Layout } from "@/layout/Layout";
+// import { Layout } from "@/layout/Layout";
 import { useState } from "react";
 import { Rating } from "@/components";
 import { withLayout } from "@/layout/Layout";
@@ -29,7 +29,7 @@ function Home(): JSX.Element {
       <div className="tag tag--size-s">Ghost</div>
       <div className="tag tag--size-m tag--green ">Green</div>
       <div className="tag tag--size-s tag--red">Red</div>
-      <div className="tag tag--size-m tag--grey">Grey</div>
+      <div className="tag tag--size-m tag--gray">Gray</div>
       <div className="tag tag--size-s tag--primary ">Primary</div>
       
       <Rating rating={rating} isEditable setRating={setRating} />
