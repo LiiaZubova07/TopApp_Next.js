@@ -1,7 +1,5 @@
 import { Button, Rating } from "@/components";
 import React , { useState } from "react";
-// import { Layout } from "@/layout/Layout";
-// import { Rating } from "@/components";
 import { withLayout } from "@/layout/Layout";
 import { GetStaticProps } from "next";
 import axios from "axios";
