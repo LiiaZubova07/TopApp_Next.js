@@ -1,9 +1,9 @@
-import { Button, Rating } from "@/components";
+import { Button, Rating } from "../components";
 import React , { useState } from "react";
-import { withLayout } from "@/layout/Layout";
+import { withLayout } from "../layout/Layout";
 import { GetStaticProps } from "next";
 import axios from "axios";
-import { MenuItem } from "@/interfaces/menu.interface";
+import { MenuItem } from "../interfaces/menu.interface";
 
 function Home({ menu }: HomeProps): JSX.Element {
   const [rating, setRating] = useState<number>(4);
