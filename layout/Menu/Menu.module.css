@@ -56,8 +56,11 @@
   line-height: 19px;
 }
 
-.thirdLevelActive,
-thirdLevel:hover {
+/* .thirdLevel: hover{
+
+} */
+
+.thirdLevelActive{
   color: var(--primary);
 }
 

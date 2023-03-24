@@ -46,7 +46,7 @@ export const Menu = (): JSX.Element => {
       <div className={styles.secondBlock}>
         {menu.map((m) => (
           <div key={m._id.secondCategory}>
-            <div className={styles.secondLevel}>m._id.secondCategory</div>
+            <div className={styles.secondLevel}>{m._id.secondCategory}</div>
             <div className={cn(styles.secondLevelBlock, {
                 [styles.secondLevelBlockOpened]: m.isOpened,
               })}>
