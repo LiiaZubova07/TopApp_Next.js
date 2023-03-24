@@ -1,1 +1,13 @@
+.menu {
+}
+
+.firstLevel {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 20px;
+  align-items: center;
+  font-weight: 500;
+font-size: 18px;
+line-height: 25px;
+}
 
