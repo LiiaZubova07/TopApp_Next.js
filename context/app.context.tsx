@@ -1,6 +1,6 @@
 import { MenuItem } from "../interfaces/menu.interface";
 import { TopLevelCategory } from "../interfaces/page.interface";
-import { createContext, ReactNode, useState } from "react";
+import { createContext, PropsWithChildren, ReactNode, useState } from "react";
 
 export interface IAppContext {
   menu: MenuItem[];
@@ -24,7 +24,7 @@ export const AppContextProvider = ({
   };
 
   return (
-    <AppContext.Provider (value={{ menu: menuState, firstCategory, setMenu }})>
+    <AppContext.Provider value={{ menu: menuState, firstCategory, setMenu }}>
       {children}
     </AppContext.Provider>
   );
