@@ -56,7 +56,7 @@ export const getStaticProps: GetStaticProps<CourseProps> = async ({
       }
     );
 
-    if(menu.length==0){
+    if(menu.length===0){
           return {
       notFound: true,
     };
