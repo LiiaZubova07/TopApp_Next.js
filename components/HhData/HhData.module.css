@@ -1,9 +1,77 @@
-.card{
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
-border-radius: 5px;
-background: var(--white);
+.hh {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 30px;
 }
 
-.blue{
-  background: #F9F8FF;
+.count {
+  padding: 20px;
+  text-align: center;
+}
+
+.salary {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px 0;
+  text-align: center;
+  padding: 20px;
+}
+.salary > div {
+  border-right: 1px solid var(--gray-light);
+}
+.salary > div:last-child {
+  border-right: none;
+}
+
+.title {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 27px;
+  margin-bottom: 10px;
+}
+
+.countValue {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  color: var(--primary);
+}
+
+.salaryValue {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 35px;
+  margin-bottom: 10px;
+}
+
+.rate {
+  display: grid;
+  grid-template-columns: repeat(3, 20px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.filled circle {
+  fill: var(--red);
+}
+
+@media screen and (max-width: 1200px) {
+  .hh {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 640px) {
+  .salary {
+    grid-template-columns: 1fr;
+  } 
+
+  .salary > div {
+border-right:none;
+border-bottom: 1px solid var(--gray-light);
+padding-bottom: 20px;
+  }
+  .salary > div:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
 }
