@@ -19,16 +19,20 @@ export const TopPageComponent = ({
       <div>{products && products.map((p) => <div key={p._id}>{p.title}</div>)}</div>
 
       <div className={styles.hhTitle}>
-        <h1 className="h2">Вакансии - {page.category}</h1>
+        <h2 className="h2">Вакансии - {page.category}</h2>
         <div className="tag tag--red tag--size-m">hh.ru</div>
       </div>
       {firstCategory == TopLevelCategory.Courses && page.hh && <HhData {...page.hh} />}
 
       {page.advantages && page.advantages.length > 0 && <>
-          <div className="h2">Преимущества</div>
+          <h2 className="h2">Преимущества</h2>
           <Advantages advantages={page.advantages} />
         </>
-      }
+}
+{page.seoText && <div>{page.seoText}</div>}
+<h2 className="h2">Получаемые навыки</h2>
+{page.tags.map(t => <div key={t} className="tag tag--primary">{t}</div>)}
+      
     </div>
   );
 };
