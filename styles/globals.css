@@ -19,7 +19,7 @@ a {
 :root {
   --black: #3b434e;
   --gray-light: #ebebeb;
-  --gray-dark:#787D85;
+  --gray-dark: #787d85;
   --white: white;
   --primary: #7653fc;
   --primary-hover: #452caa;
@@ -38,7 +38,6 @@ a {
   box-sizing: border-box;
   margin-right: 5px;
   border-radius: 20px;
-
 }
 
 .tag--size-s {

@@ -3,14 +3,12 @@
   grid-template-columns: 50px 1fr;
   gap: 10px 40px;
   margin-bottom: 30px;
-  }
-
-.title{
-    align-self: center;
-    font-weight: 700;
-
-}
-.vline{
-    border-left: 1px solid var(--gray-light);
 }
 
+.title {
+  align-self: center;
+  font-weight: 700;
+}
+.vline {
+  border-left: 1px solid var(--gray-light);
+}

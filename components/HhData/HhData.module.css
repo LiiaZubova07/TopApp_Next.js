@@ -63,12 +63,12 @@
 @media screen and (max-width: 640px) {
   .salary {
     grid-template-columns: 1fr;
-  } 
+  }
 
   .salary > div {
-border-right:none;
-border-bottom: 1px solid var(--gray-light);
-padding-bottom: 20px;
+    border-right: none;
+    border-bottom: 1px solid var(--gray-light);
+    padding-bottom: 20px;
   }
   .salary > div:last-child {
     border-bottom: none;
