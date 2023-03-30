@@ -61,10 +61,13 @@ export const getStaticProps: GetStaticProps<TopPageProps> = async ({
       }
     );
 
-    if (menu.length === 0) {
-      return {
-        notFound: true,
-      };
+
+
+    if(menu.length === 0){
+          return {
+      notFound: true,
+    };
+
     }
 
     const { data: page } = await axios.get<TopPageModel>(
