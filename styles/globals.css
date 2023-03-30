@@ -38,6 +38,7 @@ a {
   box-sizing: border-box;
   margin-right: 5px;
   border-radius: 20px;
+  padding: 10px;
 }
 
 .tag--size-s {
