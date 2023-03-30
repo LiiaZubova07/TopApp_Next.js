@@ -8,7 +8,6 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
     <>
       <Head>
         <title>MyTop - the best top</title>
-        
       </Head>
       <Component {...pageProps} />
     </>

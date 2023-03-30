@@ -6,7 +6,7 @@ import { withLayout } from "@/layout/Layout";
 import { firstLevelMenu } from "@/helpers/helpers";
 import { ParsedUrlQuery } from "querystring";
 
-function Type({firstCategory}:TypeProps): JSX.Element {
+function Type({ firstCategory }: TypeProps): JSX.Element {
   return <>Type: {firstCategory}</>;
 }
 
@@ -38,14 +38,14 @@ export const getStaticProps: GetStaticProps<TypeProps> = async ({
   const { data: menu } = await axios.post<MenuItem[]>(
     process.env.NEXT_PUBLIC_DOMAIN + "/api/top-page/find",
     {
-      firstCategory:firstCategoryItem.id,
+      firstCategory: firstCategoryItem.id,
     }
   );
 
   return {
     props: {
       menu,
-      firstCategory:firstCategoryItem.id,
+      firstCategory: firstCategoryItem.id,
     },
   };
 };

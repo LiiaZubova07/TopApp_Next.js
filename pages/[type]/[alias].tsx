@@ -10,11 +10,7 @@ import { firstLevelMenu } from "@/helpers/helpers";
 import { TopPageComponent } from "@/page-components";
 
 function TopPage({ firstCategory, menu, page, products }: TopPageProps): JSX.Element {
-  return <TopPageComponent
-  firstCategory={firstCategory}
-  page={page}
-  products={products}
-  />;
+  return <TopPageComponent firstCategory={firstCategory} page={page} products={products} />;
 }
 
 export default withLayout(TopPage);
@@ -61,13 +57,10 @@ export const getStaticProps: GetStaticProps<TopPageProps> = async ({
       }
     );
 
-
-
-    if(menu.length === 0){
-          return {
-      notFound: true,
-    };
-
+    if (menu.length === 0) {
+      return {
+        notFound: true,
+      };
     }
 
     const { data: page } = await axios.get<TopPageModel>(

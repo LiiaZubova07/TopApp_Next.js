@@ -2,10 +2,10 @@
   fill: var(--primary);
 }
 
-.star svg{
+.star svg {
   margin-right: 5px;
 }
 
-.editable{
+.editable {
   cursor: pointer;
 }
