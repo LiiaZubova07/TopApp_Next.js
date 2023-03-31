@@ -25,7 +25,7 @@ SortProps): JSX.Element => {
           [styles.active]: sort == SortEnum.Price,
         })}
       >
-        <SortIcon className={styles.sortIcon} />По цене
+        <SortIcon className={styles.sortIcon} />По&nbsp;цене
       </span>
     </div>
   );
