@@ -3,21 +3,34 @@ import styles from "./TopPageComponent.module.css";
 import { Advantages, HhData, Sort } from "@/components";
 import { TopLevelCategory } from "@/interfaces/page.interface";
 import { SortEnum } from "@/components/Sort/Sort.props";
+import { useReducer } from "react";
+import { sortReducer } from "./sort.reducer";
 
 export const TopPageComponent = ({
   page,
   products,
   firstCategory,
 }: TopPageComponentProps): JSX.Element => {
+  const [{ products: sortedProducts,sort }, dispathSort] = useReducer(sortReducer, {
+    products,
+    sort: SortEnum.Rating,
+  });
+
+  const setSort = (sort: SortEnum) => {
+    dispathSort({ type: sort });
+  };
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>
         <h1 className="h1">{page.title}</h1>
         {products && <div className="tag tag--gray tag--size-m">{products.length}</div>}
-        <Sort sort={SortEnum.Rating} setSort={() => {}} />
+        <Sort sort={sort} setSort={setSort} />
       </div>
 
-      <div>{products && products.map((p) => <div key={p._id}>{p.title}</div>)}</div>
+      <div>
+        {sortedProducts && sortedProducts.map((p) => <div key={p._id}>{p.title}</div>)}
+      </div>
 
       <div className={styles.hhTitle}>
         <h2 className="h2">Вакансии - {page.category}</h2>
