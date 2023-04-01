@@ -22,7 +22,7 @@ export const TopPageComponent = ({
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.title}>
+      <div className={styles.title}>g
         <h1 className="h1">{page?.title}</h1>
         {products && <div className="tag tag--gray tag--size-m">{products.length}</div>}
         <Sort sort={sort} setSort={setSort} />
