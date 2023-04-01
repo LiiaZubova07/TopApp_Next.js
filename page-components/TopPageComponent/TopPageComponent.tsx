@@ -14,7 +14,7 @@ export const TopPageComponent = ({
       <div className={styles.title}>
         <h1 className="h1">{page.title}</h1>
         {products && <div className="tag tag--gray tag--size-m">{products.length}</div>}
-        <Sort sort={SortEnum.Rating} setSort={()=>{ }}/>
+        <Sort sort={SortEnum.Rating} setSort={() => {}} />
       </div>
 
       <div>{products && products.map((p) => <div key={p._id}>{p.title}</div>)}</div>
