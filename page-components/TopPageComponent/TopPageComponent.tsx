@@ -46,6 +46,7 @@ export const TopPageComponent = ({
       {page?.seoText && (
         <div className={styles.seo} dangerouslySetInnerHTML={{ __html: page?.seoText }} />
       )}
+      
       <h2 className="h2">Получаемые навыки</h2>
       {page?.tags.map((t) => (
         <div key={t} className="tag tag--primary">
