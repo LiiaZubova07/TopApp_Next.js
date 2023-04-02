@@ -1,4 +1,4 @@
-import { Button, Input, Rating } from "../components";
+import { Button, Input, Rating, Textarea } from "../components";
 import React, { useState } from "react";
 import { withLayout } from "../layout/Layout";
 import { GetStaticProps } from "next";
@@ -34,6 +34,8 @@ function Home({ menu }: HomeProps): JSX.Element {
       <Rating rating={rating} isEditable setRating={setRating} />
 
       <Input placeholder="Test"/>
+      
+      <Textarea placeholder="Test Test"/>
 
     </>
   );
