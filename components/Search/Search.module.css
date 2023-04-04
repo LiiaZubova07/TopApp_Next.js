@@ -9,9 +9,11 @@
 
 .button {
   position: absolute;
-  top:3px;
+  top: 3px;
   right: 3px;
   width: 30px;
   height: 30px;
-  padding: 7px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
 }
