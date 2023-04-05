@@ -9,8 +9,8 @@
 
 .button {
   position: absolute;
-  top: 3px;
-  right: 3px;
+  top: 2px;
+  right: 10px;
   width: 30px;
   height: 30px;
   cursor: pointer;
