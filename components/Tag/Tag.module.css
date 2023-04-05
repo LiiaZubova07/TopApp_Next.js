@@ -28,21 +28,21 @@
     color: var(--white);
     background: #de0000;
   
-    font-weight: bold;
+    font-weight: 700;
   }
   
   .grey {
     color: var(--white);
     background: #b3c0d9;
   
-    font-weight: bold;
+    font-weight: 700;
   }
   
   .green {
     color: var(--green);
     background: var(--green-light);
   
-    font-weight: bold;
+    font-weight: 700;
   }
   
   .primary {

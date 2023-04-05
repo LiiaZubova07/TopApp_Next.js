@@ -45,12 +45,22 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
       <div className={styles.creditTitle}>кредит</div>
       <div className={styles.rateTitle}>
         {product.reviewCount}
-        {declarationOfNum(product.reviewCount, [" отзыв", " отзыва", " отзывов"])}</div>
+        {declarationOfNum(product.reviewCount, [" отзыв", " отзыва", " отзывов"])}
+      </div>
 
       <Divider className={styles.hr} />
 
       <div className={styles.description}>{product.description}</div>
-      <div className={styles.feature}>фичи</div>
+
+      <div className={styles.feature}>
+        {product.characteristics.map((c) => (
+          <div key={c.name} className={styles.characteristics}>
+            <span className={styles.characteristicsName}>{c.name}</span>
+            <span className={styles.characteristicsDots}></span>
+            <span className={styles.characteristicsValue}>{c.value}</span>
+          </div>
+        ))}
+      </div>
 
       <div className={styles.advBlock}>
         {product.advantages && (
