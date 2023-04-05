@@ -5,11 +5,10 @@ import cn from "classnames";
 export const Card = ({
   color = "white",
   children,
-  className,
-  ...props
+  className
 }: CardProps): JSX.Element => {
   return (
-    <div className={cn(styles.card, className, styles.blue && color === "blue")} {...props}>
+    <div className={cn(styles.card, className, styles.blue && color == "blue")}>
       {children}
     </div>
   );

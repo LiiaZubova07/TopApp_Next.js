@@ -23,8 +23,8 @@ export interface ProductModel {
   oldPrice: number;
   description: string;
   characteristics: ProductCharacteristic[];
-  advantages: string;
-  disadvantages: string;
+  advantages?: string;
+  disadvantages?: string;
   createdAt: Date;
   updatedAt: Date;
   __v: number;

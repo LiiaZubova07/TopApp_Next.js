@@ -31,62 +31,6 @@ a {
 
 /* ---------------------------------------- */
 
-.tag {
-  display: inline-block;
-
-  box-sizing: border-box;
-  margin-right: 5px;
-  border-radius: 20px;
-  padding: 10px;
-}
-
-.tag--size-s {
-  padding: 5px 10px;
-
-  font-size: 12px;
-  line-height: 12px;
-}
-
-.tag--size-m {
-  padding: 5px 10px;
-
-  font-size: 14px;
-  line-height: 14px;
-}
-
-.tag--ghost {
-  border: 1px solid var(--gray-light);
-}
-
-.tag--red {
-  color: var(--white);
-  background: #de0000;
-
-  font-weight: bold;
-}
-
-.tag--gray {
-  color: var(--white);
-  background: #b3c0d9;
-
-  font-weight: bold;
-}
-
-.tag--green {
-  color: var(--green);
-  background: var(--green-light);
-
-  font-weight: bold;
-}
-
-.tag--primary {
-  color: var(--primary);
-  background: none;
-  border: 1px solid var(--primary);
-}
-
-/* ---------------------------------------- */
-
 .text {
   margin: 0;
   display: block;
