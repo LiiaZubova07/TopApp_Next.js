@@ -4,12 +4,7 @@ import cn from "classnames";
 import StarIcon from "./star.svg";
 import { useEffect, useState, KeyboardEvent } from "react";
 
-export const Rating = ({
-  isEditable = false,
-  rating,
-  setRating,
-  ...props
-}: RatingProps): JSX.Element => {
+export const Rating = ({ isEditable = false, rating, setRating }: RatingProps): JSX.Element => {
   const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>));
 
   useEffect(() => {
@@ -63,7 +58,7 @@ export const Rating = ({
   };
 
   return (
-    <div {...props}>
+    <div>
       {ratingArray.map((rating, index) => (
         <span key={index}>{rating}</span>
       ))}

@@ -25,19 +25,25 @@ export const TopPageComponent = ({
     <div className={styles.wrapper}>
       <div className={styles.title}>
         <h1 className="h1">{page?.title}</h1>
-        {products && <Tag color='gray' size='m'>{products.length}</Tag>}
+        {products && (
+          <Tag color="gray" size="m">
+            {products.length}
+          </Tag>
+        )}
         <Sort sort={sort} setSort={setSort} />
       </div>
 
       <div>
         {sortedProducts?.map((p) => (
-          <Product key={p._id} product={p}/>
+          <Product key={p._id} product={p} />
         ))}
       </div>
 
       <div className={styles.hhTitle}>
         <h2 className="h2">Вакансии - {page?.category}</h2>
-        <Tag color='red' size='m'>hh.ru</Tag>
+        <Tag color="red" size="m">
+          hh.ru
+        </Tag>
       </div>
       {firstCategory === TopLevelCategory.Courses && page?.hh && <HhData {...page.hh} />}
 
@@ -53,7 +59,7 @@ export const TopPageComponent = ({
 
       <h2 className="h2">Получаемые навыки</h2>
       {page?.tags.map((t) => (
-        <Tag key={t} color='primary'>
+        <Tag key={t} color="primary">
           {t}
         </Tag>
       ))}

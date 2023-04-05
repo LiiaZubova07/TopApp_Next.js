@@ -18,7 +18,6 @@ export const HhData = ({
         <div className={styles.title}>Всего вакансий</div>
         <div className={styles.countValue}>{count}</div>
       </Card>
-      
 
       <Card className={styles.salary}>
         <div>

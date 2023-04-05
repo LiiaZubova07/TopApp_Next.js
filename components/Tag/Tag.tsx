@@ -8,7 +8,6 @@ export const Tag = ({
   color = "ghost",
   href,
   className,
-  ...props
 }: TagProps): JSX.Element => {
   return (
     <div
@@ -21,12 +20,9 @@ export const Tag = ({
         [styles.green]: color == "green",
         [styles.primary]: color == "primary",
       })}
-      {...props}
-    > {
-      href
-      ? <a href={href}>{children}</a>
-      : <>{children}</>
-    }
+    >
+      {" "}
+      {href ? <a href={href}>{children}</a> : <>{children}</>}
     </div>
   );
 };

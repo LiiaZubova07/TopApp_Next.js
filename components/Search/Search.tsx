@@ -6,7 +6,7 @@ import { useState } from "react";
 import SearchIcon from "./search.svg";
 import { useRouter } from "next/router";
 
-export const Search = ({ className, ...props }: SearchProps): JSX.Element => {
+export const Search = ({ className }: SearchProps): JSX.Element => {
   const [search, setSearch] = useState<string>("");
   const router = useRouter();
 
@@ -26,7 +26,7 @@ export const Search = ({ className, ...props }: SearchProps): JSX.Element => {
   };
 
   return (
-    <div className={cn(className, styles.search)} {...props}>
+    <div className={cn(className, styles.search)}>
       <input
         className="input-textarea search-input"
         placeholder="Поиск..."

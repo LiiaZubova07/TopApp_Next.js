@@ -4,19 +4,13 @@ import cn from "classnames";
 // import {ReactComponent as ArrowIcon} from "./arrow.svg";
 import ArrowIcon from "./arrow.svg";
 
-export const Button = ({
-  appearance,
-  arrow = "none",
-  children,
-  ...props
-}: ButtonProps): JSX.Element => {
+export const Button = ({ appearance, arrow = "none", children }: ButtonProps): JSX.Element => {
   return (
     <button
       className={cn(styles.button, {
         [styles.primary]: appearance == "primary",
         [styles.ghost]: appearance == "ghost",
       })}
-      {...props}
     >
       {children}
       {arrow !== "none" && (

@@ -7,7 +7,7 @@ import { declarationOfNum, priceRu } from "@/helpers/helpers";
 import { Divider } from "../Divider/Divider";
 import { Tag } from "../Tag/Tag";
 
-export const Product = ({ product, className, ...props }: ProductProps): JSX.Element => {
+export const Product = ({ product, className }: ProductProps): JSX.Element => {
   return (
     <Card className={styles.product}>
       <div className={styles.logo}>
