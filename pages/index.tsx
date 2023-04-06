@@ -5,6 +5,7 @@ import axios from "axios";
 import { MenuItem } from "../interfaces/menu.interface";
 import { Button, Rating } from "@/components";
 import { Tag } from "@/components/Tag/Tag";
+import { Input } from "@/components/Input/input";
 
 function Home({ menu }: HomeProps): JSX.Element {
   const [rating, setRating] = useState<number>(4);
@@ -42,9 +43,9 @@ function Home({ menu }: HomeProps): JSX.Element {
 
       <Rating rating={rating} isEditable setRating={setRating} />
 
-      <input placeholder="Test" className="input-textarea" />
+      <Input placeholder="Test" />
 
-      <textarea placeholder="Test Textarea" className="input-textarea" />
+      <Input placeholder="Test Textarea" />
     </>
   );
 }
