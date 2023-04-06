@@ -5,7 +5,7 @@ import { SearchProps } from "./Search.props";
 import { useState } from "react";
 import SearchIcon from "./search.svg";
 import { useRouter } from "next/router";
-import { Input } from "../Input/input";
+import { Input } from "../Input/Input";
 
 export const Search = ({ className, ...props }: SearchProps): JSX.Element => {
   const [search, setSearch] = useState<string>("");

@@ -3,9 +3,8 @@ import { withLayout } from "../layout/Layout";
 import { GetStaticProps } from "next";
 import axios from "axios";
 import { MenuItem } from "../interfaces/menu.interface";
-import { Button, Rating } from "@/components";
+import { Button, Input, Rating } from "@/components";
 import { Tag } from "@/components/Tag/Tag";
-import { Input } from "@/components/Input/input";
 
 function Home({ menu }: HomeProps): JSX.Element {
   const [rating, setRating] = useState<number>(4);
@@ -45,7 +44,7 @@ function Home({ menu }: HomeProps): JSX.Element {
 
       <Input placeholder="Test" />
 
-      <Input placeholder="Test Textarea" />
+      <textarea placeholder="Test Textarea" />
     </>
   );
 }
