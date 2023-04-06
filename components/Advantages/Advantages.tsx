@@ -20,5 +20,4 @@ export const Advantages = ({ advantages }: AdvantagesProps): JSX.Element => {
       ))}
     </>
   );
-
 };

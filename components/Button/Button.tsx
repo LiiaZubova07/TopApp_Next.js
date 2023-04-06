@@ -1,7 +1,6 @@
 import styles from "./Button.module.css";
 import { ButtonProps } from "./Button.props";
 import cn from "classnames";
-// import {ReactComponent as ArrowIcon} from "./arrow.svg";
 import ArrowIcon from "./arrow.svg";
 
 export const Button = ({

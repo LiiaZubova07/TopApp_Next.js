@@ -1,9 +1,10 @@
-import { Button, Rating} from "../components";
 import React, { useState } from "react";
 import { withLayout } from "../layout/Layout";
 import { GetStaticProps } from "next";
 import axios from "axios";
 import { MenuItem } from "../interfaces/menu.interface";
+import { Button, Rating } from "@/components";
+import { Tag } from "@/components/Tag/Tag";
 
 function Home({ menu }: HomeProps): JSX.Element {
   const [rating, setRating] = useState<number>(4);
@@ -25,18 +26,25 @@ function Home({ menu }: HomeProps): JSX.Element {
       <text className="text text--size-m">Average</text>
       <text className="text text--size-l">Big</text>
 
-      <div className="tag tag--size-s">Ghost</div>
-      <div className="tag tag--size-m tag--green ">Green</div>
-      <div className="tag tag--size-s tag--red">Red</div>
-      <div className="tag tag--size-m tag--gray">Gray</div>
-      <div className="tag tag--size-s tag--primary ">Primary</div>
+      <Tag size="s">Ghost</Tag>
+      <Tag size="m" color="green">
+        Green
+      </Tag>
+      <Tag size="s" color="red">
+        Red
+      </Tag>
+      <Tag size="m" color="gray">
+        Gray
+      </Tag>
+      <Tag size="s" color="primary">
+        Primary
+      </Tag>
 
       <Rating rating={rating} isEditable setRating={setRating} />
 
-      <input placeholder="Test" className="input-textarea"/>
-      
-      <textarea placeholder="Test Textarea" className="input-textarea"/>
+      <input placeholder="Test" className="input-textarea" />
 
+      <textarea placeholder="Test Textarea" className="input-textarea" />
     </>
   );
 }

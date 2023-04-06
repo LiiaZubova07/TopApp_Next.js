@@ -11,6 +11,8 @@
 
   font-size: 14px;
   transition: all 0.2;
+
+  margin-right: 20px;
 }
 
 .primary {
@@ -25,7 +27,7 @@
   color: var(--black);
   background-color: none;
 
-  border: 1px solid var(--green-light);
+  border: 1px solid var(--gray-light);
 }
 .ghost:hover {
   color: var(--white);

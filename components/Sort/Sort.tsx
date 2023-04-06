@@ -3,11 +3,7 @@ import { SortEnum, SortProps } from "./Sort.props";
 import SortIcon from "./sort.svg";
 import cn from "classnames";
 
-export const Sort = ({
-  sort,
-  setSort,
-}: 
-SortProps): JSX.Element => {
+export const Sort = ({ sort, setSort }: SortProps): JSX.Element => {
   return (
     <div className={styles.sort}>
       <span
