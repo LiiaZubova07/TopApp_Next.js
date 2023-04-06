@@ -12,7 +12,7 @@ import { useState } from "react";
 import { Review } from "../Review/Review";
 import { ReviewForm } from "../ReviewForm/ReviewForm";
 
-export const Product = ({ product, className }: ProductProps): JSX.Element => {
+export const Product = ({ product }: ProductProps): JSX.Element => {
   const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
 
   return (

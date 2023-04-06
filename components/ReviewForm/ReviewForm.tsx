@@ -28,7 +28,7 @@ export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps):
       <div className={styles.success}>
         <div className={styles.successTitle}>Ваш отзыв отправлен.</div>
         <div>Спасибо, Ваш отзыв будет опубликован после проверки.</div>
-        <CloseIcon className={styles.close}/>
+        <CloseIcon className={styles.close} />
       </div>
     </>
   );
