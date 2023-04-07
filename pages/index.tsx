@@ -3,7 +3,7 @@ import { withLayout } from "../layout/Layout";
 import { GetStaticProps } from "next";
 import axios from "axios";
 import { MenuItem } from "../interfaces/menu.interface";
-import { Button, Rating } from "@/components";
+import { Button, Input, Rating } from "@/components";
 import { Tag } from "@/components/Tag/Tag";
 
 function Home({ menu }: HomeProps): JSX.Element {
@@ -42,9 +42,9 @@ function Home({ menu }: HomeProps): JSX.Element {
 
       <Rating rating={rating} isEditable setRating={setRating} />
 
-      <input placeholder="Test" className="input-textarea" />
+      <Input placeholder="Test" />
 
-      <textarea placeholder="Test Textarea" className="input-textarea" />
+      <textarea placeholder="Test Textarea" />
     </>
   );
 }
