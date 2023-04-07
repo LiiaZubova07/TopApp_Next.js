@@ -6,10 +6,10 @@ import { ReviewFormProps } from "./ReviewForm.props";
 import CloseIcon from "./close.svg";
 import cn from "classnames";
 
-export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps): JSX.Element => {
+export const ReviewForm = ({ productId, className}: ReviewFormProps): JSX.Element => {
   return (
     <>
-      <div className={cn(styles.reviewForm, className)} {...props}>
+      <div className={cn(styles.reviewForm, className)}>
         <Input placeholder="Имя"></Input>
         <Input className={styles.title} placeholder="Заголовок отзыва"></Input>
         <div className={styles.rating}>
