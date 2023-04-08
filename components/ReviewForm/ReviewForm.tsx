@@ -1,12 +1,12 @@
 import { useForm, Controller } from "react-hook-form";
 import { Button } from "../Button/Button";
-import { Input } from "../Input/Input";
 import { Rating } from "../Rating/Rating";
 import { IReviewForm } from "./ReviewForm.interface";
 import styles from "./ReviewForm.module.css";
 import { ReviewFormProps } from "./ReviewForm.props";
 import CloseIcon from "./close.svg";
 import cn from "classnames";
+import { Input } from "../Input/Input";
 
 export const ReviewForm = ({ productId, className }: ReviewFormProps): JSX.Element => {
   const {
