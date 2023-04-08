@@ -9,7 +9,12 @@ import CloseIcon from "./close.svg";
 import cn from "classnames";
 
 export const ReviewForm = ({ productId, className }: ReviewFormProps): JSX.Element => {
-  const { register, control, handleSubmit } = useForm<IReviewForm>();
+  const {
+    register,
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<IReviewForm>();
 
   const onSubmit = (data: IReviewForm) => {
     console.log(data);
@@ -18,13 +23,19 @@ export const ReviewForm = ({ productId, className }: ReviewFormProps): JSX.Eleme
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className={cn(styles.reviewForm, className)}>
-        {/* пропал placeholder в Имя и Заголовок. и, похоже, из-за этого в консоли undefined*/}
-        <Input {...register("name")} placeholder="Имя"></Input>
         <Input
-          {...register("title")}
-          className={styles.title}
-          placeholder="Заголовок отзыва"
+          {...register("name", { required: { value: true, message: "Заполните имя" } })}
+          placeholder="Имя"
+          error={errors.name}
         ></Input>
+
+        <Input
+          {...register("title", { required: { value: true, message: "Заполните заголовок" } })}
+          placeholder="Заголовок отзыва"
+          className={styles.title}
+          error={errors.title}
+        ></Input>
+
         <div className={styles.rating}>
           <span>Оценка:</span>
           <Controller
