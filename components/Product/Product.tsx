@@ -8,15 +8,24 @@ import { Divider } from "../Divider/Divider";
 import { Tag } from "../Tag/Tag";
 import Image from "next/image";
 import cn from "classnames";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Review } from "../Review/Review";
 import { ReviewForm } from "../ReviewForm/ReviewForm";
 
-export const Product = ({ product }: ProductProps): JSX.Element => {
+export const Product = ({ product, className }: ProductProps): JSX.Element => {
   const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
+  const reviewRef = useRef<HTMLDivElement>(null);
+
+  const scrollToReview = () => {
+    setIsReviewOpened(true);
+    reviewRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
 
   return (
-    <>
+    <div className={className}>
       <Card className={styles.product}>
         <div className={styles.logo}>
           <Image
@@ -56,9 +65,12 @@ export const Product = ({ product }: ProductProps): JSX.Element => {
 
         <div className={styles.priceTitle}>цена</div>
         <div className={styles.creditTitle}>кредит</div>
+
         <div className={styles.rateTitle}>
-          {product.reviewCount}
-          {declarationOfNum(product.reviewCount, [" отзыв", " отзыва", " отзывов"])}
+          <a href="#ref" onClick={scrollToReview}>
+            {product.reviewCount}
+            {declarationOfNum(product.reviewCount, [" отзыв", " отзыва", " отзывов"])}
+          </a>
         </div>
 
         <Divider className={styles.hr} />
@@ -103,21 +115,23 @@ export const Product = ({ product }: ProductProps): JSX.Element => {
           </Button>
         </div>
       </Card>
+
       <Card
         color="blue"
         className={cn(styles.reviews, {
           [styles.opened]: isReviewOpened,
           [styles.closed]: !isReviewOpened,
         })}
+        ref={reviewRef}
       >
         {product.reviews.map((r) => (
           <div key={r._id}>
             <Review review={r} />
-            <Divider/>
+            <Divider />
           </div>
         ))}
-        <ReviewForm productId={product._id}/>
+        <ReviewForm productId={product._id} />
       </Card>
-    </>
+    </div>
   );
 };

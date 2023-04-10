@@ -53,7 +53,7 @@
   cursor: pointer;
 }
 
-.error .close path{
+.error .close path {
   stroke: var(--red);
 }
 

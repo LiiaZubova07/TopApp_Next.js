@@ -141,18 +141,21 @@
 
 /* ---------------------------------------- */
 
-.closed{
-overflow: hidden;
-max-height: 0;
-padding: 0;
+.closed {
+  overflow: hidden;
+  max-height: 0;
+  padding: 0;
 }
 
-.opened{
+.opened {
   overflow: hidden;
   min-height: auto;
   padding: 30px;
 }
 
+.rateTitle a {
+  color: var(--primary);
+}
 
 /* -------------------------------------------- */
 @media screen and (max-width: 1320px) {

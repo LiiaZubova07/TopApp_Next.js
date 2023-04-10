@@ -36,12 +36,9 @@ export const ReviewForm = ({ productId, className }: ReviewFormProps): JSX.Eleme
         setError("Что-то пошло не так");
       }
     } catch (e) {
-
-
-      if(e instanceof Error){
+      if (e instanceof Error) {
         setError(e.message);
       }
-  
     }
   };
 
