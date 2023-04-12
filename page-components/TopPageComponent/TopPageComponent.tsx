@@ -26,7 +26,6 @@ export const TopPageComponent = ({
   }, [products]);
 
   return (
-
     <div className={styles.wrapper}>
       <div className={styles.title}>
         <h1 className="h1">{page?.title}</h1>
