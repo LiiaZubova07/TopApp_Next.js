@@ -39,7 +39,7 @@ export const TopPageComponent = ({
 
       <div>
         {sortedProducts?.map((p) => (
-          <Product key={p._id} product={p} />
+          <Product layout key={p._id} product={p} />
         ))}
       </div>
 
