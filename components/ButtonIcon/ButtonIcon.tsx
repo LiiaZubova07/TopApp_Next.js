@@ -4,11 +4,10 @@ import cn from "classnames";
 import ArrowIcon from "./arrow.svg";
 
 export const ButtonIcon = ({
-  //без ...props не работает поднятие наверх
   appearance,
   icon,
   className,
-  ...props
+  onClick,
 }: ButtonIconProps): JSX.Element => {
   const IconComponent = icons[icon];
 
@@ -18,7 +17,7 @@ export const ButtonIcon = ({
         [styles.primary]: appearance == "primary",
         [styles.white]: appearance == "white",
       })}
-      {...props}
+      onClick={onClick}
     >
       <IconComponent />
     </button>
