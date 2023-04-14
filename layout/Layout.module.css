@@ -12,16 +12,31 @@
 
 .header {
   grid-area: header;
-
 }
 .body {
   grid-area: body;
+  outline: none;
 }
 .sidebar {
   grid-area: sidebar;
 }
 .footer {
   grid-area: footer;
+}
+
+.skipLink {
+  display: block;
+  position: fixed;
+  left: 100px;
+  top: 0;
+  overflow: hidden;
+  height: 0;
+  background: var(--primary);
+  color: var(--white);
+}
+
+.displayed {
+  height: auto;
 }
 
 @media screen and (max-width: 765px) {
@@ -31,12 +46,11 @@
       "header"
       "body"
       "footer";
-      gap: 10px;
+    gap: 10px;
   }
   .sidebar {
     display: none !important;
   }
-
 
   .body {
     padding: 15px;
