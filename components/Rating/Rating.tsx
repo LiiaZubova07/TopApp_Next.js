@@ -2,39 +2,52 @@ import { RatingProps } from "./Rating.props";
 import styles from "./Rating.module.css";
 import cn from "classnames";
 import StarIcon from "./star.svg";
-import { useEffect, useState, KeyboardEvent, ForwardedRef } from "react";
+import { useEffect, useState, KeyboardEvent, useRef } from "react";
 
 export const Rating = ({
   isEditable = false,
   rating,
   error,
   setRating,
+  tabIndex,
 }: RatingProps): JSX.Element => {
   const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>));
+  const ratingArrayRef = useRef<(HTMLSpanElement | null)[]>([]);
 
   useEffect(() => {
     constructRating(rating);
-  }, [rating]);
+  }, [rating, tabIndex]);
+
+  const computeFocus = (r: number, i: number): number => {
+    if (!isEditable) {
+      return -1;
+    }
+    if (!rating && i == 0) {
+      return tabIndex ?? 0;
+    }
+    if (r && i + 1) {
+      return tabIndex ?? 0;
+    }
+    return -1;
+  };
 
   const constructRating = (currentRating: number) => {
-    const updatedArray = ratingArray.map((r: JSX.Element, index: number) => {
+    const updatedArray = ratingArray.map((r: JSX.Element, i: number) => {
       return (
         <span
-          key={index}
+          key={i}
           className={cn(styles.star, {
-            [styles.filled]: index < currentRating,
+            [styles.filled]: i < currentRating,
             [styles.editable]: isEditable,
           })}
-          onMouseEnter={() => changeDisplay(index + 1)}
+          onMouseEnter={() => changeDisplay(i + 1)}
           onMouseLeave={() => changeDisplay(rating)}
-          onClick={() => onClick(index + 1)}
+          onClick={() => onClick(i + 1)}
+          tabIndex={computeFocus(rating, i)}
+          onKeyDown={handleKey}
+          ref={(r) => ratingArrayRef.current?.push(r)}
         >
-          <StarIcon
-            tabIndex={isEditable ? 0 : -1}
-            onKeyDown={(event: KeyboardEvent<SVGElement>) =>
-              isEditable && handleSpace(index + 1, event)
-            }
-          />
+          <StarIcon />
         </span>
       );
     });
@@ -55,11 +68,24 @@ export const Rating = ({
     setRating(index);
   };
 
-  const handleSpace = (index: number, event: KeyboardEvent<SVGElement>) => {
-    if (event.code != "Space" || !setRating) {
+  const handleKey = (event: KeyboardEvent) => {
+    if (!isEditable || !setRating) {
       return;
     }
-    setRating(index);
+    if (event.code == "ArrowRight" || event.code == "ArrowUp") {
+      if (!rating) {
+        setRating(1);
+      } else {
+        event.preventDefault();
+        setRating(rating < 5 ? rating + 1 : 5);
+      }
+      ratingArrayRef.current?.[rating]?.focus();
+    }
+    if (event.code == "ArrowLeft" || event.code == "ArrowDown") {
+      event.preventDefault();
+      setRating(rating > 1 ? rating - 1 : 1);
+      ratingArrayRef.current?.[rating - 2]?.focus();
+    }
   };
 
   return (
