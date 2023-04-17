@@ -3,7 +3,6 @@ import { ButtonProps } from "./Button.props";
 import cn from "classnames";
 import ArrowIcon from "./arrow.svg";
 import { motion, useMotionValue } from "framer-motion";
-import { useEffect } from "react";
 
 export const Button = ({
   appearance,

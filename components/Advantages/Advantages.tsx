@@ -1,5 +1,4 @@
 import styles from "./Advantages.module.css";
-import cn from "classnames";
 import CheckIcon from "./check.svg";
 import React from "react";
 import { AdvantagesProps } from "./Advantages.props";
