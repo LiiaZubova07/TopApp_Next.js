@@ -16,13 +16,14 @@ export const Rating = ({
 
   useEffect(() => {
     constructRating(rating);
-  }, [rating, tabIndex]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ rating, tabIndex]);
 
   const computeFocus = (r: number, i: number): number => {
     if (!isEditable) {
       return -1;
     }
-    if (!rating && i == 0) {
+    if (!rating && i === 0) {
       return tabIndex ?? 0;
     }
     if (r && i + 1) {

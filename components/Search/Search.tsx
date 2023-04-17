@@ -20,15 +20,16 @@ export const Search = ({ className, ...props }: SearchProps): JSX.Element => {
     });
   };
 
-  const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === "Enter") {
-      goToSearch();
-    }
-  };
+  // const handleKeyDown = (event: KeyboardEvent) => {
+  //   if (event.key === "Enter") {
+  //     goToSearch();
+  //   }
+  // };
 
   return (
     <div className={cn(className, styles.search)} {...props}>
-      <Input className={styles.input}
+      <Input
+        className={styles.input}
         placeholder="Поиск..."
         value={search}
         onChange={(event) => setSearch(event.target.value)}
