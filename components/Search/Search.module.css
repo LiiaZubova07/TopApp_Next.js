@@ -1,23 +1,23 @@
 .search {
-  position: relative;
-  width: 100%;
+	position: relative;
+	width: 100%;
 }
 
 .search-input {
-  width: 100%;
+	width: 100%;
 }
 
 .button {
-  position: absolute;
-  top: 2px;
-  right: 10px;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  background: transparent;
-  border: none;
+	position: absolute;
+	top: 2px;
+	right: 10px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
 }
 
 .input{
-  width: 100%;
+	width: 100%;
 }

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prepare":"husky install",
+    "prepare": "husky install",
     "dev": "next dev",
     "start": "next start",
     "stylelint": "stylelint \"**/*.css\" --fix"
@@ -20,7 +20,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.9",
-    "stylelint": "^15.0.0"
+    "stylelint": "^15.5.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^5.5.0",
@@ -28,7 +28,7 @@
     "@types/react": "^18.0.27",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "@typescript-eslint/parser": "^5.51.0",
-    "eslint": "^8.33.0",
+    "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.3",
     "stylelint-config-standard": "^30.0.1",
