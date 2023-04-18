@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prepare": "husky install",
+    "prepare":"husky install",
     "dev": "next dev",
-    "export": "next export",
     "start": "next start",
     "stylelint": "stylelint \"**/*.css\" --fix"
   },
