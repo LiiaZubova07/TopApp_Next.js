@@ -15,3 +15,4 @@ export default function App({ Component, pageProps, router }: AppProps): JSX.Ele
     </>
   );
 }
+ 
